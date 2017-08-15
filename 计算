@@ -1,0 +1,57 @@
+package hello;
+ 
+import java.util.Scanner;
+
+public class Main {
+	private static Scanner sca;
+	private static Scanner scb;
+	private static Scanner scc;
+	private static Scanner scd;
+	public static void main(String[] args){
+		System.out.println("-----------------------------Welcome!------（float四则）----------------------------");
+		System.out.println("today is bad!");
+			input();		
+	}
+	public static void input(){
+	System.out.print("input first number:");
+		sca =new Scanner(System.in);
+		float a=sca.nextFloat();
+	System.out.print("input second number:");
+		scb =new Scanner(System.in);	
+		float b=scb.nextFloat();
+	System.out.println("运算法则：");
+		scc =new Scanner(System.in);
+		String c=scc.nextLine();
+		switch(c){
+		case "+" : add(a,b); break;
+		case "-" : subtract(a,b); break;
+		case "*" : multiply(a,b); break;
+		case "/" : division(a,b); break;
+		}
+	System.out.println("GO ON? YES INPUT Y ,NO INPUT N...");
+		scd =new Scanner(System.in);
+		String d=scd.nextLine();
+		stay(d);
+	}
+	private static void stay(String d){
+		switch(d){
+		case "Y": input(); break;
+		case "y": input(); break;
+		case "N":  System.out.println("bye!");break;
+		case "n":  System.out.println("bye!");break;
+		}
+	}
+	private static void add(float a,float b) {
+		System.out.println("first number"+"( + )"+"second number"+" = "+(a+b));
+	}
+	private static void subtract(float a,float b){
+		System.out.println("first number"+"( - )"+"second number"+" = "+(a-b));
+	}
+	private static void multiply(float a,float b){
+		System.out.println("first number"+"( * ) "+"second number"+" = "+(a*b));
+	}
+	private static void division(float a,float b){
+		System.out.println("first number"+"( / )"+"second number"+" = "+(a/b));
+	}
+
+}
